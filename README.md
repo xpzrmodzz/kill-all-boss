@@ -1,31 +1,29 @@
-while true do
-    wait()
+-- Fonction pour tuer tous les boss en boucle
+local function killAllBosses()
+    while true do
+        wait()
 
-    -- Script pour le NPC DragonGiraffe
-    local args1 = {
-        [1] = workspace.NPC.DragonGiraffe.Humanoid,
-        [2] = 2
-    }
-    game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args1))
+        -- Tuer le boss DragonGiraffe
+        pcall(function()
+            game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(workspace.NPC.DragonGiraffe.Humanoid)
+        end)
 
-    -- Script pour le NPC Griffin
-    local args2 = {
-        [1] = workspace.NPC.Griffin.Humanoid,
-        [2] = 4
-    }
-    game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args2))
+        -- Tuer le boss Griffin
+        pcall(function()
+            game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(workspace.NPC.Griffin.Humanoid)
+        end)
 
-    -- Script pour le NPC LavaGorilla
-    local args3 = {
-        [1] = workspace.NPC.LavaGorilla.Humanoid,
-        [2] = 6
-    }
-    game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args3))
+        -- Tuer le boss LavaGorilla
+        pcall(function()
+            game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(workspace.NPC.LavaGorilla.Humanoid)
+        end)
 
-    -- Script pour le NPC CENTAUR
-    local args4 = {
-        [1] = workspace.NPC.CENTAUR.Humanoid,
-        [2] = 1
-    }
-    game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args4))
+        -- Tuer le boss CENTAUR
+        pcall(function()
+            game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(workspace.NPC.CENTAUR.Humanoid)
+        end)
+    end
 end
+
+-- Démarrer la fonction pour tuer les boss
+killAllBosses()
